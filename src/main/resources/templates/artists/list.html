@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring WEb App By Hasan</title>
+</head>
+<body>
+<h1>Authors List</h1>
+<table>
+    <tr>
+        <th bgcolor="aqua">ID</th>
+        <th bgcolor="red">Name </th>
+        <th bgcolor="blue" >Albums</th>
+    </tr>
+
+    <tr th:each="artist : ${artists}">
+        <td th:text="${artist.id}" >123</td>
+        <td th:text="${artist.knownAs}">oguz</td>
+        <td th:text="${artist.getAlbums()}">afd</td>
+    </tr>
+</table>
+<h2>It's done!!!</h2>
+</body>
+</html>
